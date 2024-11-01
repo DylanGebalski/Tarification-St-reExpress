@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+    content="width=device-width,
+    initial-scale=1.0">
+    <title>Tarification Bois de Chauffage</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Tarification du Bois de Chauffage</h1>
+            <p>Sélectionnez la taille du bois et calculez le coùt en fonction de la quantité.</p>
+        </header>
+
+        <main>
+            <section class="tarifs">
+                <h2>Taille de Bois et Tarifs</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Taille de Bois</th>
+                            <th>Prix par Stère</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>50 cm</td>
+                            <td>80 €</td>
+                        </tr>
+                        <tr>
+                            <td>33 cm</td>
+                            <td>90 €</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="calculateur">
+                <h2>Calculateur de Coùt</h2>
+                <form id="calculateur-form">
+                    <label for="taille-bois">Taille du Bois :</label>
+                    <select id="taille-bois" required>
+                        <option value="50 cm" data-prix="80">50 cm - 80 €/stère</option>
+                        <option value="33 cm" data-prix="90">33 cm - 90 €/stère</option>
+                    </select>
+                    <label for="quantite">Quantité en Stères :</label>
+                    <input type="number" id="quantite" min="1" placeholder="Ex: 5" required>
+                    <button type="button"
+                    onclick="calculerPrix()">Calculer</button>
+                </form>
+            </section>
+        </main>
+        <script scr="script.js"></script>
+    </body>
+</html>
